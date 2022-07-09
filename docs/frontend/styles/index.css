@@ -54,7 +54,7 @@
 
   #markdown-toc {
     &:before {
-      @apply font-black mb-3 ml-1.5 mt-3 block uppercase tracking-wide text-xs;
+      @apply font-black mb-3 block uppercase tracking-wide text-xs;
       content: "On this page...";
     }
   }
@@ -63,11 +63,15 @@
     /* Table of contents */
 
     * + #markdown-toc {
-      @apply mt-8;
+      @apply mt-10;
     }
 
     #markdown-toc {
-      @apply list-none px-4 py-2 border border-gray-300 rounded bg-gray-50 xl:hidden;
+      &:before {
+        @apply mt-3 ml-1.5;
+      }
+
+      @apply list-none px-4 py-2 border-l border-gray-300 bg-gray-50 xl:hidden;
 
       li {
         @apply mt-1 mb-1;
@@ -80,6 +84,18 @@
 
     .prose h2 {
       @apply scroll-mt-6;
+    }
+
+    .prose [data-component="config-option"] {
+      @apply my-8;
+
+      &:first-child {
+        @apply mt-0;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
     }
 
     /* Code highlighting */
@@ -300,7 +316,7 @@
 
   #page-sidebar {
     #markdown-toc {
-      @apply list-none relative -top-2 pl-6 py-2 border-l border-gray-300 text-sm space-y-2 opacity-70 hover:opacity-100 transition;
+      @apply list-none relative pl-6 py-3 border-l border-gray-300 text-sm space-y-2 opacity-70 hover:opacity-100 transition;
 
       a {
         @apply no-underline hover:underline;

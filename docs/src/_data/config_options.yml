@@ -1,0 +1,13 @@
+- name: project_name
+  type: String
+  default: "Lookbook"
+  example: config.lookbook.project_name = "Lookbook Demo"
+  description: The name of your project. Displayed in the Lookbook header.
+- name: debug_menu
+  type: Boolean
+  default: "`Rails.env.development?`"
+  example: "config.lookbook.debug_menu = false # always hide the debug menu"
+  description: Whether or not to show the debug menu in the Lookbook header.
+- name: listen_paths
+  example: config.lookbook.listen_paths << "directory/to/watch"
+  description: Specify additional directories to listen for changes in.

@@ -1,4 +1,4 @@
-<header class="layout-container  border-b border-gray-300">
+<header class="layout-container border-b border-gray-300 relative z-50">
   <div class="layout-column">
     <div class="layout-content flex items-center">
       <a href="/" class="text-lg font-black tracking-[0.05em] uppercase text-indigo-600">Lookbook</a>
